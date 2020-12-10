@@ -1,7 +1,8 @@
-package bqtr.surrogate;
+package sbqtr;
 
 import com.google.cloud.bigquery.FieldList;
 import com.google.cloud.bigquery.Schema;
+import sbqtr.SFieldList;
 
 public class SSchema {
     public Schema toSchema() {
@@ -12,7 +13,7 @@ public class SSchema {
     }
 
     final SFieldList fields;
-    SSchema(Schema schema) {
+    public SSchema(Schema schema) {
         this.fields = new SFieldList(schema.getFields());
     }
 }

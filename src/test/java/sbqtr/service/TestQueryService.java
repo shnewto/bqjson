@@ -1,4 +1,4 @@
-package bqtr;
+package sbqtr.service;
 
 import com.google.cloud.bigquery.*;
 import org.junit.jupiter.api.Test;
@@ -10,10 +10,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-public class QueryService {
+public class TestQueryService {
     BigQuery bigQuery;
 
-    public QueryService() {
+    public TestQueryService() {
         bigQuery = BigQueryOptions.getDefaultInstance().getService();
     }
 
