@@ -1,17 +1,14 @@
-package sbqtr.transform;
+package bqjson.transform;
 
 import com.google.cloud.bigquery.FieldList;
 import com.google.cloud.bigquery.Schema;
 import com.google.cloud.bigquery.TableResult;
 import com.google.gson.Gson;
-import sbqtr.SFieldList;
-import sbqtr.SSchema;
-import sbqtr.STableResult;
+import bqjson.surrogate.SFieldList;
+import bqjson.surrogate.SSchema;
+import bqjson.surrogate.STableResult;
 
-import java.nio.file.Files;
-import java.nio.file.Paths;
-
-public class Serializer {
+public class Encode {
     public static String toJson(TableResult tableResult) {
         Gson gson = new Gson();
         return gson.toJson(new STableResult(tableResult));

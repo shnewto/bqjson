@@ -22,8 +22,9 @@ dependencies {
     // This dependency is exported to consumers, that is to say found on their compile classpath.
     api 'org.apache.commons:commons-math3:3.6.1'
 
-    compile 'com.google.cloud:google-cloud-bigquery:1.126.1'
-    compile 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.google.cloud:google-cloud-bigquery:1.126.1'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'org.slf4j:slf4j-log4j12:1.7.30'
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
     testImplementation 'org.junit.platform:junit-platform-runner:1.7.0'
@@ -36,7 +37,7 @@ test {
 }
 
 pitest {
-    targetClasses = ['sbqtr.*']  //by default "${project.group}.*"
+    targetClasses = ['bqjson.*']  //by default "${project.group}.*"
     threads = 4
     outputFormats = ['XML', 'HTML']
     timestampedReports = false

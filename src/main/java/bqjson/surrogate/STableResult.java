@@ -1,4 +1,4 @@
-package sbqtr;
+package bqjson.surrogate;
 
 
 import com.google.api.gax.paging.Page;

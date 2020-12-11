@@ -1,14 +1,12 @@
-package sbqtr.util;
+package bqjson.util;
 
 import com.google.cloud.bigquery.FieldList;
 import com.google.cloud.bigquery.Schema;
 import com.google.cloud.bigquery.TableResult;
-import org.junit.Test;
-import sbqtr.service.TestQueryService;
-import sbqtr.transform.Deserializer;
-import sbqtr.transform.Serializer;
+import bqjson.service.TestQueryService;
+import bqjson.transform.Decode;
+import bqjson.transform.Encode;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -18,11 +16,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class TestUtils {
 
     public static void saveQuery(TableResult tableResult, String path) throws IOException {
-        Files.write(Paths.get(path), Serializer.toJsonBytes(tableResult));
+        Files.write(Paths.get(path), Encode.toJsonBytes(tableResult));
     }
 
     public static TableResult loadQuery(String path) throws IOException {
-        return Deserializer.fromJson(new String(Files.readAllBytes(Paths.get(path))), TableResult.class);
+        return Decode.fromJson(new String(Files.readAllBytes(Paths.get(path))), TableResult.class);
     }
 
     public static void generateTestData() throws InterruptedException, IOException {
@@ -61,9 +59,9 @@ public class TestUtils {
         schema = tableResult.getSchema();
         fieldList = schema.getFields();
 
-        Files.write(Paths.get(tableResult_s), Serializer.toJsonBytes(tableResult));
-        Files.write(Paths.get(schema_s), Serializer.toJsonBytes(schema));
-        Files.write(Paths.get(fieldListFile_s), Serializer.toJsonBytes(fieldList));
+        Files.write(Paths.get(tableResult_s), Encode.toJsonBytes(tableResult));
+        Files.write(Paths.get(schema_s), Encode.toJsonBytes(schema));
+        Files.write(Paths.get(fieldListFile_s), Encode.toJsonBytes(fieldList));
     }
 
 }

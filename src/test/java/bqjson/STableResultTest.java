@@ -1,14 +1,13 @@
-package sbqtr;
+package bqjson;
 
+import bqjson.surrogate.STableResult;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import sbqtr.context.TestContext;
-import sbqtr.util.TestUtils;
+import bqjson.context.TestContext;
 
 import java.io.IOException;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class STableResultTest {
     TestContext context;

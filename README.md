@@ -1,8 +1,11 @@
-# sbqtr
-sbqtr - Surrogate BigQuery TableResult (and TableResult adjacent types) to make testing easier.
+# bqjson
+Encode BigQuery classes to JSON, and Decode that JSON back to BigQuery classes
 
 ## Build
 `./gradlew build`
+
+
+
 
 ## Test Data
 Need environment set for generating new test data:

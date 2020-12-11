@@ -1,8 +1,7 @@
-package sbqtr;
+package bqjson.surrogate;
 
 import com.google.cloud.bigquery.FieldList;
 import com.google.cloud.bigquery.Schema;
-import sbqtr.SFieldList;
 
 public class SSchema {
     public Schema toSchema() {
