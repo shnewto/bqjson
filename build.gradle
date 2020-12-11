@@ -9,6 +9,7 @@
 plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'java-library'
+    id 'info.solidsoft.pitest' version '1.5.1'
 }
 
 repositories {
@@ -33,3 +34,12 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+pitest {
+    targetClasses = ['sbqtr.*']  //by default "${project.group}.*"
+    threads = 4
+    outputFormats = ['XML', 'HTML']
+    timestampedReports = false
+}
+
+build.dependsOn 'pitest'
