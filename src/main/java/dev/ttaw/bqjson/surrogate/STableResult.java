@@ -1,6 +1,5 @@
 package dev.ttaw.bqjson.surrogate;
 
-
 import com.google.api.gax.paging.Page;
 import com.google.cloud.PageImpl;
 import com.google.cloud.bigquery.*;
@@ -8,7 +7,9 @@ import com.google.cloud.bigquery.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/** Surrogate type to help Serializing/Deserializing BigQuery TableResult. */
+/**
+ * Surrogate type to help Serializing/Deserializing BigQuery TableResult.
+ */
 public class STableResult {
     final SSchema schema;
     final long totalRows;
@@ -23,7 +24,7 @@ public class STableResult {
 
     private void sanitizeFieldValueLists() {
         List<FieldValueList> sanitized = new ArrayList<>();
-        for (List<FieldValue> values: fieldValueLists) {
+        for (List<FieldValue> values : fieldValueLists) {
             sanitized.add(FieldValueList.of(values, schema.getFields()));
         }
         fieldValueLists = sanitized;

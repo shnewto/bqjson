@@ -37,7 +37,7 @@ test {
 }
 
 pitest {
-    targetClasses = ['bqjson.*']  //by default "${project.group}.*"
+    targetClasses = ['dev.ttaw.bqjson.*']  //by default "${project.group}.*"
     threads = 4
     outputFormats = ['XML', 'HTML']
     timestampedReports = false

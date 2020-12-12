@@ -1,7 +1,6 @@
 package dev.ttaw.bqjson.surrogate;
 
 import dev.ttaw.bqjson.context.TestContext;
-import dev.ttaw.bqjson.surrogate.SSchema;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -19,7 +18,7 @@ class SSchemaTest {
 
     @Test
     void toSchema() {
-        context.schemas.forEach(s ->{
+        context.schemas.forEach(s -> {
             SSchema sSchema = new SSchema(s);
             assertThat(sSchema.toSchema()).isEqualTo(s);
         });
@@ -27,7 +26,7 @@ class SSchemaTest {
 
     @Test
     void getFields() {
-        context.schemas.forEach(s ->{
+        context.schemas.forEach(s -> {
             SSchema sSchema = new SSchema(s);
             assertThat(sSchema.getFields()).isEqualTo(s.getFields());
         });

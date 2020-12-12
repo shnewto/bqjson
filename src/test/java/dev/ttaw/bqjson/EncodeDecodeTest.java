@@ -1,6 +1,5 @@
 package dev.ttaw.bqjson;
 
-import dev.ttaw.bqjson.SerDe;
 import com.google.cloud.bigquery.FieldList;
 import com.google.cloud.bigquery.Schema;
 import com.google.cloud.bigquery.TableResult;
@@ -16,6 +15,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class EncodeDecodeTest {
     TestContext context;
+
     @BeforeAll
     void setUp() throws InterruptedException, IOException {
         context = TestContext.getInstance();
@@ -59,7 +59,7 @@ public class EncodeDecodeTest {
 
     @Test
     void testFieldListToJsonAndBack() {
-        context.fieldLists.forEach(f ->{
+        context.fieldLists.forEach(f -> {
             String fieldListJson = SerDe.toJson(f);
             FieldList fieldList = SerDe.fromJson(fieldListJson, FieldList.class);
             assertThat(fieldList).isEqualTo(f);

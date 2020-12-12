@@ -1,6 +1,5 @@
 package dev.ttaw.bqjson.surrogate;
 
-import dev.ttaw.bqjson.surrogate.SFieldList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import dev.ttaw.bqjson.context.TestContext;
