@@ -35,4 +35,4 @@ jobs:
         with:
           java-version: 1.8
       - name: Build with Gradle
-        run: ./gradlew build -i
+        run: GRADLE_OPTS="-Xmx4g" ./gradlew build -i
