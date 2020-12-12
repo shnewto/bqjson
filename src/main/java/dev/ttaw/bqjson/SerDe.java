@@ -23,7 +23,7 @@ public class SerDe {
 
     public static byte[] toJsonBytes(TableResult tableResult) {
         Gson gson = new Gson();
-        return gson.toJson(new STableResult(tableResult)).getBytes();
+        return gson.toJson(new STableResult(tableResult)).getBytes(StandardCharsets.UTF_8);
     }
 
     public static String toJson(Schema schema) {
@@ -33,7 +33,7 @@ public class SerDe {
 
     public static byte[] toJsonBytes(Schema schema) {
         Gson gson = new Gson();
-        return gson.toJson(new SSchema(schema)).getBytes();
+        return gson.toJson(new SSchema(schema)).getBytes(StandardCharsets.UTF_8);
     }
 
     public static String toJson(FieldList fieldList) {
@@ -43,7 +43,7 @@ public class SerDe {
 
     public static byte[] toJsonBytes(FieldList fieldList) {
         Gson gson = new Gson();
-        return gson.toJson(new SFieldList(fieldList)).getBytes();
+        return gson.toJson(new SFieldList(fieldList)).getBytes(StandardCharsets.UTF_8);
     }
 
     public static <T> T fromJson(String object, Class<T> classOfT) throws ClassCastException {
