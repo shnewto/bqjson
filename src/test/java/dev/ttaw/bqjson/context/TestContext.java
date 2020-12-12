@@ -25,7 +25,7 @@ public class TestContext {
     private TestContext() throws IOException {
         ClassLoader classLoader = getClass().getClassLoader();
 
-        File resDir = new File("src/test/resources/");
+        File resDir = new File(Paths.get("src","test", "resources").toString());
 
         File[] foundFiles;
 
