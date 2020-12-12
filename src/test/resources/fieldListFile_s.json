@@ -1,1 +1,0 @@
-{"fields":[{"name":"repository_name","type":{"equivalent":"STRING","constant":"STRING"},"mode":"NULLABLE"},{"name":"repository_owner","type":{"equivalent":"STRING","constant":"STRING"},"mode":"NULLABLE"}]}
