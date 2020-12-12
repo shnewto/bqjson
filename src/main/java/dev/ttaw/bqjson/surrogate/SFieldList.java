@@ -8,7 +8,7 @@ import com.google.cloud.bigquery.FieldList;
 
 import java.util.List;
 
-/** Surrogate type for help Serializing/Deserializing BigQuery FieldList. */
+/** Surrogate type to help Serializing/Deserializing BigQuery FieldList. */
 public class SFieldList {
     final List<Field> fields;
 

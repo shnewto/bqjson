@@ -1,4 +1,4 @@
-package dev.ttaw.bqjson;
+package dev.ttaw.bqjson.surrogate;
 
 import dev.ttaw.bqjson.context.TestContext;
 import dev.ttaw.bqjson.surrogate.STableResult;

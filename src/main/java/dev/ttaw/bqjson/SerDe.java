@@ -10,7 +10,7 @@ import com.google.gson.Gson;
 
 import java.nio.charset.StandardCharsets;
 
-/** Serialize/Deserialize BigQuery TableResult (and TableResult adjacent types). */
+/** Serialize and Deserialize BigQuery TableResults (and TableResult adjacent types). */
 public class SerDe {
     private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(SerDe.class);
 

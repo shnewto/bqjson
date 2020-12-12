@@ -1,4 +1,4 @@
-package dev.ttaw.bqjson.transform;
+package dev.ttaw.bqjson;
 
 import dev.ttaw.bqjson.SerDe;
 import com.google.cloud.bigquery.FieldList;

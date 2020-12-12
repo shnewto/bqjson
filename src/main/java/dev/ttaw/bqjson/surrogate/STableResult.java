@@ -8,7 +8,7 @@ import com.google.cloud.bigquery.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/** Surrogate type for help Serializing/Deserializing BigQuery TableResult. */
+/** Surrogate type to help Serializing/Deserializing BigQuery TableResult. */
 public class STableResult {
     final SSchema schema;
     final long totalRows;

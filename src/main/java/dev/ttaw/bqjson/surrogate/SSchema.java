@@ -3,7 +3,7 @@ package dev.ttaw.bqjson.surrogate;
 import com.google.cloud.bigquery.FieldList;
 import com.google.cloud.bigquery.Schema;
 
-/** Surrogate type for help Serializing/Deserializing BigQuery Schema. */
+/** Surrogate type to help Serializing/Deserializing BigQuery Schema. */
 public class SSchema {
     public Schema toSchema() {
         return Schema.of(fields.toFieldList());
