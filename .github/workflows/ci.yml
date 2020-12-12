@@ -13,7 +13,7 @@ jobs:
         with:
           java-version: 1.8
       - name: Build with Gradle
-        run: ./gradlew build
+        run: ./gradlew build -i
 
   build-and-test-macos:
     runs-on: macos-latest
@@ -24,7 +24,7 @@ jobs:
         with:
           java-version: 1.8
       - name: Build with Gradle
-        run: ./gradlew build
+        run: ./gradlew build -i
 
   build-and-test-windows:
     runs-on: windows-latest
@@ -35,4 +35,4 @@ jobs:
         with:
           java-version: 1.8
       - name: Build with Gradle
-        run: ./gradlew build
+        run: ./gradlew build -i
