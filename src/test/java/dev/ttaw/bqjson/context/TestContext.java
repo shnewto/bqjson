@@ -7,10 +7,12 @@ import com.google.cloud.bigquery.TableResult;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class TestContext {
@@ -25,44 +27,59 @@ public class TestContext {
     private TestContext() throws IOException {
         ClassLoader classLoader = getClass().getClassLoader();
 
-        File resDir = new File(Paths.get("src","test", "resources").toString());
 
-        File[] foundFiles;
+        List<String> tableResultFiles = Arrays.asList(
+                "tableResult_fda_food.json",
+                "tableResult_github_timeline.json",
+                "tableResult_world_port_index.json");
 
-        foundFiles = resDir.listFiles((_dir, name) -> name.startsWith("tableResult_"));
-
-        Arrays.stream(foundFiles).forEach(f -> {
+        tableResultFiles.forEach(f -> {
+            String json = null;
             try {
-                String json = new String(Files.readAllBytes(Paths.get(f.toString())));
-                tableResultJsonList.add(json);
-                tableResults.add(SerDe.fromJson(json, TableResult.class));
+                json = new String(Files.readAllBytes(Paths.get(classLoader.getResource(f).toURI())));
             } catch (IOException e) {
                 e.printStackTrace();
+            } catch (URISyntaxException e) {
+                e.printStackTrace();
             }
+            tableResultJsonList.add(json);
+            tableResults.add(SerDe.fromJson(json, TableResult.class));
         });
 
-        foundFiles = resDir.listFiles((_dir, name) -> name.startsWith("schema_"));
+        List<String> schemaFiles = Arrays.asList(
+                "schema_fda_food.json",
+                "schema_github_timeline.json",
+                "schema_world_port_index.json");
 
-        Arrays.stream(foundFiles).forEach(f -> {
+        schemaFiles.forEach(f -> {
+            String json = null;
             try {
-                String json = new String(Files.readAllBytes(Paths.get(f.toString())));
-                schemaJsonList.add(json);
-                schemas.add(SerDe.fromJson(json, Schema.class));
+                json = new String(Files.readAllBytes(Paths.get(classLoader.getResource(f).toURI())));
             } catch (IOException e) {
                 e.printStackTrace();
+            } catch (URISyntaxException e) {
+                e.printStackTrace();
             }
+            schemaJsonList.add(json);
+            schemas.add(SerDe.fromJson(json, Schema.class));
         });
 
-        foundFiles = resDir.listFiles((_dir, name) -> name.startsWith("fieldList_"));
+        List<String> fieldListFiles = Arrays.asList(
+                "fieldList_fda_food.json",
+                "fieldList_github_timeline.json",
+                "fieldList_world_port_index.json");
 
-        Arrays.stream(foundFiles).forEach(f -> {
+        fieldListFiles.forEach(f -> {
+            String json = null;
             try {
-                String json = new String(Files.readAllBytes(Paths.get(f.toString())));
-                fieldListJsonList.add(json);
-                fieldLists.add(SerDe.fromJson(json, FieldList.class));
+                json = new String(Files.readAllBytes(Paths.get(classLoader.getResource(f).toURI())));
             } catch (IOException e) {
                 e.printStackTrace();
+            } catch (URISyntaxException e) {
+                e.printStackTrace();
             }
+            fieldListJsonList.add(json);
+            fieldLists.add(SerDe.fromJson(json, FieldList.class));
         });
     }
 
