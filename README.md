@@ -30,9 +30,9 @@ class MyBigQueryService {
 # Why?
 
 This package came about because I wanted to write tests for parts of applications that use 
-BQ TableResults, but didn't want to have to actually interact with BQ to run them. I expected
-that saving TableResults as JSON in files I could read in and deserialize later should be trivial,
-when it wasn't, I wrote this helper library so it would be.
+BQ TableResults, but didn't want to have to actually interact with BQ to run them. I'd hoped
+that writing TableResults to JSON files (that I could read in and use on the next test runs) would be trivial.
+When it wasn't, I wrote this helper library so it could be.
 
 
 # Notes
