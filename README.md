@@ -5,11 +5,11 @@ Serialize/Deserialize BigQuery TableResults (and TableResult adjacent types) to/
 
 # Example
 ```java
-import bqjson.SerDe;
-/* imports ... */   
+package com.github.shnewto.bqjson.SerDe;
+/* ... */
 
 class MyBigQueryService {
-    void workToDo() {
+    void myBigQueryWork() {
         /* Get a table result from BigQuery */
         TableResult originalTableResult = bigQuery
                 .create(JobInfo.newBuilder(queryConfig)
@@ -21,6 +21,20 @@ class MyBigQueryService {
         String jsonString = SerDe.toJson(tableResult);
         /* Deserialize the JSON back into a TableResult */
         TableResult reconstitutedTableResult = SerDe.fromJson(jsonString, TableResult.class);
+        
+        /* ... */
     }
 }
 ```
+
+# Why?
+
+This package came about because I wanted to write tests for parts of applications that use 
+BQ TableResults, but didn't want to have to actually interact with BQ to run them. I expected
+that saving TableResults as JSON in files I could read in and deserialize later should be trivial,
+when it wasn't, I wrote this helper library so it would be.
+
+
+# Notes
+
+Please raise issues or make PRs if you have a question or spot a bug :heart::heart:

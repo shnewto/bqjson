@@ -1,4 +1,4 @@
-package dev.ttaw.bqjson.surrogate;
+package com.github.shnewto.bqjson.surrogate;
 
 import com.google.cloud.bigquery.Field;
 import com.google.cloud.bigquery.FieldList;

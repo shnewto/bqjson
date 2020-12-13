@@ -1,18 +1,16 @@
-package dev.ttaw.bqjson.context;
+package com.github.shnewto.bqjson.context;
 
-import dev.ttaw.bqjson.SerDe;
+import com.github.shnewto.bqjson.SerDe;
 import com.google.cloud.bigquery.FieldList;
 import com.google.cloud.bigquery.Schema;
 import com.google.cloud.bigquery.TableResult;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public class TestContext {

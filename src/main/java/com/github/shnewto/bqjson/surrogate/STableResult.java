@@ -1,4 +1,4 @@
-package dev.ttaw.bqjson.surrogate;
+package com.github.shnewto.bqjson.surrogate;
 
 import com.google.api.gax.paging.Page;
 import com.google.cloud.PageImpl;

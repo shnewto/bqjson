@@ -1,8 +1,8 @@
-package dev.ttaw.bqjson.surrogate;
+package com.github.shnewto.bqjson.surrogate;
 
+import com.github.shnewto.bqjson.context.TestContext;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import dev.ttaw.bqjson.context.TestContext;
 
 import java.io.IOException;
 

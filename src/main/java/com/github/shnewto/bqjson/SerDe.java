@@ -1,8 +1,8 @@
-package dev.ttaw.bqjson;
+package com.github.shnewto.bqjson;
 
-import dev.ttaw.bqjson.surrogate.SFieldList;
-import dev.ttaw.bqjson.surrogate.SSchema;
-import dev.ttaw.bqjson.surrogate.STableResult;
+import com.github.shnewto.bqjson.surrogate.SFieldList;
+import com.github.shnewto.bqjson.surrogate.SSchema;
+import com.github.shnewto.bqjson.surrogate.STableResult;
 import com.google.cloud.bigquery.FieldList;
 import com.google.cloud.bigquery.Schema;
 import com.google.cloud.bigquery.TableResult;

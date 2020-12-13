@@ -1,9 +1,9 @@
-package dev.ttaw.bqjson;
+package com.github.shnewto.bqjson;
 
+import com.github.shnewto.bqjson.context.TestContext;
 import com.google.cloud.bigquery.FieldList;
 import com.google.cloud.bigquery.Schema;
 import com.google.cloud.bigquery.TableResult;
-import dev.ttaw.bqjson.context.TestContext;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
