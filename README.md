@@ -1,4 +1,4 @@
-[![GitHub Actions CI](https://github.com/shnewto/bqjson/workflows/CI/badge.svg?branch=main)](https://github.com/shnewto/bqjson/actions?query=workflow%3ACI)
+[![GitHub Actions build](https://github.com/shnewto/bqjson/workflows/build/badge.svg?branch=main)](https://github.com/shnewto/bqjson/actions?query=workflow%3ACI)
 [![Maven Central](https://img.shields.io/maven-central/v/com.github.shnewto/bqjson.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.github.shnewto%22%20AND%20a:%22bqjson%22)
 
 # bqjson
