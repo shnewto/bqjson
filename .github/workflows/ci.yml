@@ -4,7 +4,7 @@ name: CI
 on: push
 
 jobs:
-  build-and-test-ubuntu:
+  ubuntu-latest:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -15,7 +15,7 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build -i
 
-  build-and-test-macos:
+  macos-latest:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
@@ -26,7 +26,7 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build -i
 
-  build-and-test-windows:
+  windows-latest:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
@@ -35,6 +35,4 @@ jobs:
         with:
           java-version: 1.8
       - name: Build with Gradle
-        env:
-          GRADLE_OPTS: -Xmx4g
         run: ./gradlew build -i
