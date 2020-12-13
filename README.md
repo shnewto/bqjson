@@ -1,5 +1,6 @@
 [![GitHub Actions CI](https://github.com/shnewto/bqjson/workflows/CI/badge.svg?branch=main)](https://github.com/shnewto/bqjson/actions?query=workflow%3ACI)
-[![Sonatype Nexus (Releases)](https://img.shields.io/nexus/r/com.github.shnewto/bqjson?server=https%3A%2F%2Foss.sonatype.org%2F)](https://search.maven.org/artifact/com.github.shnewto/bqjson)
+[![Maven Central](https://img.shields.io/maven-central/v/com.github.shnewto/bqjson.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.github.shnewto%22%20AND%20a:%22bqjson%22)
+
 # bqjson
 Serialize/Deserialize BigQuery TableResults (and TableResult adjacent types) to/from JSON.
 
