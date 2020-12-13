@@ -1,3 +1,5 @@
+![](https://github.com/shnewto/bqjson/workflows/CI/badge.svg?branch=main)
+
 # bqjson
 Serialize/Deserialize BigQuery TableResults (and TableResult adjacent types) to/from JSON.
 
