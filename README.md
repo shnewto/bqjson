@@ -19,7 +19,7 @@ class MyBigQueryService {
                 .getQueryResults();
         
         /* Serialize TableResult to JSON */
-        String jsonString = SerDe.toJson(tableResult);
+        String jsonString = SerDe.toJson(originalTableResult);
         /* Deserialize the JSON back into a TableResult */
         TableResult reconstitutedTableResult = SerDe.fromJson(jsonString, TableResult.class);
         
